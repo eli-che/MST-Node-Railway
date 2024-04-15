@@ -1,0 +1,5 @@
+För att kompilera används Visual Studio 2019.
+Starta ett projekt i Visual Studio och lägg till Algorithm.cpp och kör sedan "Build"
+En executable som heter Algorithm.exe kommer att skapas. (Obs kan påverkas av ditt projekt namn)
+Vid val av andra verktyg för kompilering, kan jag inte ge stöd.
+För att det ska kompilera utan problem krävas Visual Studio 2019 och att inställningarna ej har modifierats.
