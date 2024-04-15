@@ -155,9 +155,7 @@ int main(int argc, char const* argv[])
 
 	for (int j = 0; j < counterCost; j++) {
 		int v1 = nodeConnection[j];
-		//	cout << "a " << stoi(nodeConnection[j]) << endl;
 		int v2 = nodeConnection2[j];
-		//	cout << "b " << stoi(nodeConnection2[j]) << endl;
 		int w = nodeCost[j];
 		connection.push_back(make_pair(w, make_pair(v1, v2)));
 	}
@@ -170,17 +168,11 @@ int main(int argc, char const* argv[])
 	while ((numConnection < counterNode - 1) || (mstindex < counterCost)) {
 
 		int x = connection[mstindex].second.first;
-		//	cout << "a " << a << endl;
 		int y = connection[mstindex].second.second;
-		//		cout << "b " << b << endl;
 		int w = connection[mstindex].first;
-		//	cout << "w = " << w << endl;
-		   //	cout << "looking for A: " << a << " and B: " << b << endl;
-		   //	cout << "looking for sss A: " << find(a) << " and B: " << find(b) << endl;
 		if (find(x) != find(y)) {
 			unions(x, y);
 			totalWeight += w;
-		//	cout << nodes[a] << " " << nodes[b] << " " << w << endl;
 			output << nodes[x] << "	" << nodes[y] << "	" << w << endl;
 			numConnection++;
 		}
